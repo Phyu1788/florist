@@ -1,0 +1,72 @@
+.about {
+  background: var(--white);
+  padding: 80px 24px;
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-story {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 56px;
+}
+
+.about-story h2 {
+  margin-bottom: 20px;
+}
+
+.about-story p {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.value-card {
+  text-align: center;
+  padding: 32px 20px;
+  background: var(--cream);
+  border-radius: var(--radius);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.value-card h3 {
+  font-family: var(--serif);
+  margin-bottom: 8px;
+  color: var(--text-heading);
+}
+
+.value-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .about { padding: 50px 16px; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .values-grid { grid-template-columns: 1fr; }
+}

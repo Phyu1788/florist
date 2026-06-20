@@ -1,0 +1,68 @@
+const products = [
+  {
+    id: 1,
+    name: "Rose Elegance Bouquet",
+    price: 49.99,
+    emoji: "🌹",
+    category: "bouquet",
+    description: "A stunning arrangement of 12 premium red roses, wrapped in rustic kraft paper with a satin ribbon.",
+  },
+  {
+    id: 2,
+    name: "Sunshine Daisy Bundle",
+    price: 34.99,
+    emoji: "🌼",
+    category: "bouquet",
+    description: "Bright and cheerful daisies that bring warmth to any room. Perfect for everyday joy.",
+  },
+  {
+    id: 3,
+    name: "Lavender Dreams",
+    price: 42.99,
+    emoji: "💜",
+    category: "arrangement",
+    description: "A calming arrangement of fresh lavender sprigs paired with white baby's breath.",
+  },
+  {
+    id: 4,
+    name: "Tropical Paradise",
+    price: 59.99,
+    emoji: "🌺",
+    category: "arrangement",
+    description: "Exotic orchids and birds of paradise create a vibrant, tropical statement piece.",
+  },
+  {
+    id: 5,
+    name: "Peony Bliss",
+    price: 54.99,
+    emoji: "🌸",
+    category: "bouquet",
+    description: "Luxurious peonies in soft pink hues — romantic, full, and absolutely breathtaking.",
+  },
+  {
+    id: 6,
+    name: "Wildflower Meadow",
+    price: 38.99,
+    emoji: "🌻",
+    category: "bouquet",
+    description: "A hand-picked selection of seasonal wildflowers for a natural, countryside feel.",
+  },
+  {
+    id: 7,
+    name: "White Lily Arrangement",
+    price: 45.99,
+    emoji: "🤍",
+    category: "arrangement",
+    description: "Elegant white lilies in a ceramic vase — timeless sophistication for any occasion.",
+  },
+  {
+    id: 8,
+    name: "Single Red Rose",
+    price: 12.99,
+    emoji: "🥀",
+    category: "single",
+    description: "One perfect long-stem red rose, elegantly wrapped. Simple yet unforgettable.",
+  },
+]
+
+export default products

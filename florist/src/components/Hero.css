@@ -1,0 +1,120 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 24px 80px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--pink-light) 0%, var(--cream) 50%, var(--green-light) 100%);
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--green-dark);
+  background: var(--white);
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 20px;
+  line-height: 1.15;
+}
+
+.highlight {
+  color: var(--pink-dark);
+  position: relative;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-light);
+  max-width: 500px;
+  margin: 0 auto 36px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50px;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--pink-dark);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(196, 122, 145, 0.35);
+}
+.btn-primary:hover {
+  background: #b56a81;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(196, 122, 145, 0.45);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--green-dark);
+  border: 2px solid var(--green);
+}
+.btn-secondary:hover {
+  background: var(--green-light);
+  transform: translateY(-2px);
+  color: var(--green-dark);
+}
+
+.hero-decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.float {
+  position: absolute;
+  font-size: 2.5rem;
+  opacity: 0.3;
+  animation: floatAnim 6s ease-in-out infinite;
+}
+
+.float-1 { top: 15%; left: 8%; animation-delay: 0s; }
+.float-2 { top: 25%; right: 10%; animation-delay: 1.5s; }
+.float-3 { bottom: 20%; left: 12%; animation-delay: 3s; }
+.float-4 { bottom: 15%; right: 8%; animation-delay: 4.5s; }
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 70px 20px 60px; }
+  .hero-title { font-size: 2.5rem; }
+  .hero-subtitle { font-size: 1rem; }
+  .float { font-size: 1.8rem; }
+}
