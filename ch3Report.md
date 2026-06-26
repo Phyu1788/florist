@@ -16,13 +16,13 @@ I built this florist website using a project-based approach, starting with the c
 <!-- List the ACTUAL paths in your personal repo. The validator checks these exist. -->
 
 ### MCP
-- path: .mcp.json
+- path: florist/.mcp.json
 - what: MCP server configuration for Context7, used during development for React documentation lookups and best practices guidance.
 
 ### Skill
-- path: .claude/skills/vercel-react-best-practices/SKILL.md
+- path: florist/.claude/skills/vercel-react-best-practices/SKILL.md
 - what: Vercel React Best Practices — a comprehensive performance optimization guide for React and Next.js with 70 rules across 8 categories (eliminating waterfalls, bundle size, re-render optimization, etc.), used to ensure components follow production-grade patterns.
 
 ### Agent
-- path: .claude/agents/expert-coder.md
+- path: florist/.claude/agents/expert-coder.md
 - what: Expert Coder agent — a world-class software engineering agent used for writing, implementing, and generating production-ready code with proper error handling, edge case management, and idiomatic conventions.
