@@ -1,6 +1,6 @@
 .contact {
   padding: 80px 24px;
-  background: linear-gradient(135deg, var(--green-light) 0%, var(--cream) 100%);
+  background: var(--bg-card);
 }
 
 .contact-inner {
@@ -30,7 +30,7 @@
 }
 
 .info-item h4 {
-  font-family: var(--serif);
+  font-family: var(--mono);
   font-size: 1rem;
   color: var(--text-heading);
   margin-bottom: 2px;
@@ -38,19 +38,20 @@
 
 .info-item p {
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: var(--text-muted);
   line-height: 1.5;
 }
 
 .contact-form {
-  background: var(--white);
+  background: var(--bg);
   padding: 36px;
   border-radius: var(--radius);
   box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
 }
 
 .contact-form h3 {
-  font-family: var(--serif);
+  font-family: var(--mono);
   margin-bottom: 24px;
   color: var(--text-heading);
 }
@@ -63,21 +64,26 @@
 .form-group textarea {
   width: 100%;
   padding: 14px 16px;
-  border: 1.5px solid var(--cream-dark);
+  border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
   font-family: var(--sans);
   font-size: 0.95rem;
   color: var(--text);
-  background: var(--cream);
+  background: var(--bg-card);
   transition: border-color var(--transition), box-shadow var(--transition);
   resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--pink);
-  box-shadow: 0 0 0 3px rgba(232, 160, 180, 0.2);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
 }
 
 .form-btn {

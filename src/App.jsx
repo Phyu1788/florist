@@ -1,41 +1,37 @@
 import { useState } from "react"
-import { CartProvider } from "./context/CartContext"
+import useScrollReveal from "./hooks/useScrollReveal"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
-import ProductGrid from "./components/ProductGrid"
-import FlowerMeaning from "./components/FlowerMeaning"
-import BouquetGallery from "./components/BouquetGallery"
 import About from "./components/About"
+import Skills from "./components/Skills"
+import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
-import CartPage from "./components/CartPage"
-import ProductDetail from "./components/ProductDetail"
+import ProjectDetail from "./components/ProjectDetail"
 import "./App.css"
 
 function App() {
-  const [showCart, setShowCart] = useState(false)
-  const [selectedProduct, setSelectedProduct] = useState(null)
+  const [selectedProject, setSelectedProject] = useState(null)
+  useScrollReveal()
 
   return (
-    <CartProvider>
-      <Header onCartClick={() => setShowCart(true)} />
+    <>
+      <Header />
       <main>
         <Hero />
-        <ProductGrid onProductClick={setSelectedProduct} />
-        <FlowerMeaning />
-        <BouquetGallery />
         <About />
+        <Skills />
+        <Projects onProjectClick={setSelectedProject} />
         <Contact />
       </main>
       <Footer />
-      {showCart && <CartPage onClose={() => setShowCart(false)} />}
-      {selectedProduct && (
-        <ProductDetail
-          product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
+      {selectedProject && (
+        <ProjectDetail
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
         />
       )}
-    </CartProvider>
+    </>
   )
 }
 

@@ -13,46 +13,45 @@ export default function Contact() {
   return (
     <section className="contact" id="contact">
       <div className="contact-inner">
-        <div className="contact-info">
-          <span className="section-tag">📍 Visit Us</span>
-          <h2>Get in touch</h2>
-
-          <div className="info-item">
-            <span className="info-icon">🏠</span>
-            <div>
-              <h4>Address</h4>
-              <p>123 Blossom Street, Garden District</p>
-            </div>
-          </div>
-
-          <div className="info-item">
-            <span className="info-icon">📞</span>
-            <div>
-              <h4>Phone</h4>
-              <p>(555) 123-BLOOM</p>
-            </div>
-          </div>
+        <div className="contact-info" data-reveal>
+          <span className="section-tag">📬 Get In Touch</span>
+          <h2>Let's work together</h2>
 
           <div className="info-item">
             <span className="info-icon">✉️</span>
             <div>
               <h4>Email</h4>
-              <p>hello@bloomandpetal.com</p>
+              <p>hello@phyu.dev</p>
             </div>
           </div>
 
           <div className="info-item">
-            <span className="info-icon">🕐</span>
+            <span className="info-icon">🔗</span>
             <div>
-              <h4>Hours</h4>
-              <p>Mon–Sat: 8am – 7pm</p>
-              <p>Sun: 9am – 5pm</p>
+              <h4>LinkedIn</h4>
+              <p>linkedin.com/in/phyu</p>
+            </div>
+          </div>
+
+          <div className="info-item">
+            <span className="info-icon">💻</span>
+            <div>
+              <h4>GitHub</h4>
+              <p>github.com/phyu</p>
+            </div>
+          </div>
+
+          <div className="info-item">
+            <span className="info-icon">📍</span>
+            <div>
+              <h4>Location</h4>
+              <p>Available for remote work</p>
             </div>
           </div>
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <h3>Send us a message</h3>
+        <form className="contact-form" onSubmit={handleSubmit} data-reveal="right">
+          <h3>Send me a message</h3>
           <div className="form-group">
             <input type="text" placeholder="Your name" required />
           </div>

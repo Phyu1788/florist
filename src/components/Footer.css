@@ -1,7 +1,8 @@
 .footer {
-  background: var(--text-heading);
-  color: rgba(255, 255, 255, 0.7);
+  background: var(--bg-card);
+  color: var(--text-muted);
   padding: 60px 24px 0;
+  border-top: 1px solid var(--border);
 }
 
 .footer-inner {
@@ -13,23 +14,16 @@
   padding-bottom: 40px;
 }
 
-.footer-brand .logo-icon {
-  width: 22px;
-  height: 22px;
-  vertical-align: middle;
-}
-
-.footer-brand .footer-logo-icon {
-  display: inline-block;
-  margin-right: 4px;
-}
-
-.footer-brand .logo-text {
-  font-family: 'Dancing Script', cursive;
+.footer-logo {
+  font-family: var(--mono);
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--white);
-  margin-left: 8px;
+  color: var(--text-heading);
+}
+
+.footer-logo .logo-bracket {
+  color: var(--accent);
+  font-weight: 400;
 }
 
 .footer-tagline {
@@ -40,33 +34,37 @@
 }
 
 .footer-links h4 {
-  font-family: var(--serif);
-  color: var(--white);
-  font-size: 1rem;
+  font-family: var(--mono);
+  color: var(--text-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
   margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .footer-links a {
   display: block;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-muted);
   font-size: 0.9rem;
   padding: 5px 0;
   transition: color var(--transition);
 }
 
 .footer-links a:hover {
-  color: var(--pink);
+  color: var(--accent-light);
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border);
   padding: 20px 0;
   text-align: center;
 }
 
 .footer-bottom p {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-muted);
+  opacity: 0.6;
 }
 
 @media (max-width: 768px) {

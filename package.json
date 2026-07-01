@@ -7,7 +7,15 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "playwright test",
+    "test:screenshots": "playwright test tests/screenshots.spec.js",
+    "screenshot": "node scripts/take-screenshot.js",
+    "screenshot:all": "node scripts/take-screenshot.js all",
+    "screenshot:hero": "node scripts/take-screenshot.js hero",
+    "screenshot:products": "node scripts/take-screenshot.js products",
+    "screenshot:gallery": "node scripts/take-screenshot.js gallery",
+    "screenshot:mobile": "node scripts/take-screenshot.js mobile"
   },
   "dependencies": {
     "react": "^19.2.6",
@@ -15,6 +23,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.61.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
@@ -22,6 +31,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
+    "playwright": "^1.61.1",
     "vite": "^8.0.12"
   }
 }

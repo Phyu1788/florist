@@ -1,25 +1,25 @@
 import "./About.css"
 
-const values = [
+const strengths = [
   {
-    icon: "🌿",
-    title: "Farm Fresh",
-    text: "Sourced directly from local growers every morning for peak freshness.",
+    icon: "📱",
+    title: "Responsive Design",
+    text: "Pixel-perfect layouts that look amazing on every screen size, from mobile to ultrawide.",
   },
   {
-    icon: "🚚",
-    title: "Same-Day Delivery",
-    text: "Order before 2pm and we'll deliver your blooms the very same day.",
+    icon: "⚡",
+    title: "Performance",
+    text: "Fast-loading, optimized applications with clean code and efficient rendering.",
   },
   {
-    icon: "💐",
-    title: "Handcrafted",
-    text: "Every arrangement is designed by our skilled florists with care and artistry.",
+    icon: "🎯",
+    title: "Clean Code",
+    text: "Readable, maintainable code with consistent patterns and meaningful naming.",
   },
   {
-    icon: "♻️",
-    title: "Eco Friendly",
-    text: "Sustainable packaging and locally grown flowers — kind to the planet.",
+    icon: "♿",
+    title: "Accessibility",
+    text: "Building inclusive interfaces that everyone can use, following WCAG guidelines.",
   },
 ]
 
@@ -27,23 +27,30 @@ export default function About() {
   return (
     <section className="about" id="about">
       <div className="about-inner">
-        <div className="about-story">
-          <span className="section-tag">🌸 Our Story</span>
-          <h2>A passion for petals</h2>
+        <div className="about-story" data-reveal>
+          <span className="section-tag">👋 About Me</span>
+          <h2>A passion for building the web</h2>
           <p>
-            Bloom & Petal started as a small corner shop in 2015 with one simple
-            belief: flowers make everything better. Today, we're a team of
-            passionate florists dedicated to bringing beauty into your everyday
-            life — one bouquet at a time.
+            I'm a frontend developer who loves crafting beautiful, functional
+            web experiences. I started my journey with HTML and CSS, and quickly
+            fell in love with the creative possibilities of modern web
+            development.
           </p>
           <p>
-            Whether it's a birthday, anniversary, or just because, we pour our
-            hearts into every arrangement we create.
+            Today I work with React, JavaScript, and modern CSS to build
+            responsive, accessible interfaces. When I'm not coding, you'll
+            find me exploring new design trends, contributing to open source,
+            or learning something new.
           </p>
         </div>
         <div className="values-grid">
-          {values.map((v, i) => (
-            <div className="value-card" key={i}>
+          {strengths.map((v, i) => (
+            <div
+              className="value-card"
+              key={i}
+              data-reveal
+              data-reveal-delay={Math.min(i, 5)}
+            >
               <span className="value-icon">{v.icon}</span>
               <h3>{v.title}</h3>
               <p>{v.text}</p>

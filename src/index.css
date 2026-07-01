@@ -1,26 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  --pink: #e8a0b4;
-  --pink-light: #fdf2f5;
-  --pink-dark: #c47a91;
-  --green: #7a9e7e;
-  --green-light: #e8f0e8;
-  --green-dark: #5a7d5e;
-  --cream: #fdf8f4;
-  --cream-dark: #f5ebe0;
-  --text: #4a3f4a;
-  --text-light: #7a6f7a;
-  --text-heading: #2d252d;
+  --accent: #6c63ff;
+  --accent-light: #8b83ff;
+  --green: #22c55e;
+  --red: #f87171;
   --white: #ffffff;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
   --radius: 12px;
   --radius-sm: 8px;
   --sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --mono: 'Space Grotesk', 'Fira Code', monospace;
   --transition: 0.3s ease;
+}
+
+/* ─── Dark Theme (default) ─── */
+:root,
+[data-theme="dark"] {
+  --bg: #0f0f1a;
+  --bg-card: #1a1a2e;
+  --bg-card-hover: #22223a;
+  --accent-glow: rgba(108, 99, 255, 0.15);
+  --text: #e0e0e0;
+  --text-muted: #8888aa;
+  --text-heading: #ffffff;
+  --border: #2a2a3e;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --code-bg: rgba(0, 0, 0, 0.3);
+  --code-dots-bg: rgba(0, 0, 0, 0.3);
+  --code-keyword: #c084fc;
+  --code-green: #4ade80;
+  --header-bg: rgba(15, 15, 26, 0.92);
+}
+
+/* ─── Light Theme ─── */
+[data-theme="light"] {
+  --bg: #f8f9fa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0f1f3;
+  --accent-glow: rgba(108, 99, 255, 0.1);
+  --text: #374151;
+  --text-muted: #6b7280;
+  --text-heading: #111827;
+  --border: #e5e7eb;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --code-bg: #f1f3f5;
+  --code-dots-bg: #e9ecef;
+  --code-keyword: #7c3aed;
+  --code-green: #16a34a;
+  --header-bg: rgba(248, 249, 250, 0.92);
 }
 
 *, *::before, *::after {
@@ -34,7 +65,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--text);
-  background: var(--cream);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -46,21 +77,21 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--serif);
+  font-family: var(--mono);
   color: var(--text-heading);
   line-height: 1.2;
 }
 
-h1 { font-size: 3rem; font-weight: 600; }
-h2 { font-size: 2rem; font-weight: 500; }
+h1 { font-size: 3rem; font-weight: 700; }
+h2 { font-size: 2rem; font-weight: 600; }
 h3 { font-size: 1.25rem; font-weight: 500; }
 
 a {
-  color: var(--green-dark);
+  color: var(--accent-light);
   text-decoration: none;
   transition: color var(--transition);
 }
-a:hover { color: var(--pink-dark); }
+a:hover { color: var(--accent); }
 
 button {
   font-family: var(--sans);
@@ -70,6 +101,58 @@ button {
 }
 
 img { max-width: 100%; height: auto; }
+
+/* ─── Section Tag ─── */
+.section-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 12px;
+}
+
+/* ─── Scroll Reveal Animations ─── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal="left"] {
+  transform: translateX(-40px);
+}
+
+[data-reveal="right"] {
+  transform: translateX(40px);
+}
+
+[data-reveal="scale"] {
+  transform: scale(0.92);
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Staggered delays */
+[data-reveal-delay="1"] { transition-delay: 0.1s; }
+[data-reveal-delay="2"] { transition-delay: 0.2s; }
+[data-reveal-delay="3"] { transition-delay: 0.3s; }
+[data-reveal-delay="4"] { transition-delay: 0.4s; }
+[data-reveal-delay="5"] { transition-delay: 0.5s; }
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 
 @media (max-width: 768px) {
   h1 { font-size: 2.2rem; }

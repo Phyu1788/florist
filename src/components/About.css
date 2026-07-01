@@ -1,5 +1,5 @@
 .about {
-  background: var(--white);
+  background: var(--bg);
   padding: 80px 24px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .about-story p {
-  color: var(--text-light);
+  color: var(--text-muted);
   font-size: 1.05rem;
   line-height: 1.7;
   margin-bottom: 12px;
@@ -34,14 +34,16 @@
 .value-card {
   text-align: center;
   padding: 32px 20px;
-  background: var(--cream);
+  background: var(--bg-card);
   border-radius: var(--radius);
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  border: 1px solid var(--border);
 }
 
 .value-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+  border-color: var(--accent);
 }
 
 .value-icon {
@@ -51,14 +53,14 @@
 }
 
 .value-card h3 {
-  font-family: var(--serif);
+  font-family: var(--mono);
   margin-bottom: 8px;
   color: var(--text-heading);
 }
 
 .value-card p {
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: var(--text-muted);
   line-height: 1.5;
 }
 
